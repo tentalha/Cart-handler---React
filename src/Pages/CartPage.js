@@ -1,12 +1,9 @@
-import React, { useContext, useState, useEffect } from "react";
-import Context from "../Context/Context";
-import { FaCcVisa } from "react-icons/fa";
-import { FaCcMastercard } from "react-icons/fa";
-import { FaCcPaypal } from "react-icons/fa";
-import { BsCashCoin } from "react-icons/bs";
-import { BsFillStarFill } from "react-icons/bs";
+import React, { useContext, useEffect, useState } from "react";
+import { BsCashCoin, BsFillStarFill } from "react-icons/bs";
+import { FaCcMastercard, FaCcPaypal, FaCcVisa } from "react-icons/fa";
 import { GoLocation } from "react-icons/go";
 import { Link } from "react-router-dom";
+import Context from "../Context/Context";
 import "./CartPage.css"; //for responsiveness
 
 function CartPage() {
@@ -23,7 +20,7 @@ function CartPage() {
           (currentPrice.discountedPrice
             ? currentPrice.discountedPrice
             : currentPrice.price) *
-            currentPrice.qty,
+          currentPrice.qty,
         0
       );
       setTotalPrice(price.toFixed(2));
@@ -111,14 +108,6 @@ function CartPage() {
                       >
                         Delete
                       </button>
-                      {/* <span className="opacity-30">|</span>
-                      <button className="mx-3 text-xs text-[#007185]">
-                        Save for later
-                      </button>
-                      <span className="opacity-30">|</span>
-                      <button className="mx-3 text-xs text-[#007185]">
-                        Compare with similar
-                      </button> */}
                     </div>
                   </div>
                   <div className="text-lg font-bold  relative w-[100px] h-[155px] ">
